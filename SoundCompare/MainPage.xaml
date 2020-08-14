@@ -10,8 +10,8 @@
 
     <Grid>
         <!--#region MainPage-->
-        <Grid x:Name="HomePage" Visibility="Collapsed">
-            <StackPanel>
+        <Grid x:Name="HomePage"  VerticalAlignment="Center">
+            <StackPanel Padding="0,120,65,118">
                 <StackPanel Orientation="Horizontal" Height="500" HorizontalAlignment="Center">
 
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2" Width="250">
@@ -58,9 +58,9 @@
                 <TextBlock x:Name="Log" Height="200" Padding="5"></TextBlock>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right">
-                <Button x:Name="ShowSettings" Width="50" Height="50" Click="ShowSettings_Click">Settings</Button>
+                <Button x:Name="ShowSettings" HorizontalAlignment="Right" Click="ShowSettings_Click">Settings</Button>
                 <Button x:Name="showEffects" Click="showEffects_Click" Content="&lt;&lt;" HorizontalAlignment="Right" Margin="0,150,0,0"></Button>
-                <StackPanel x:Name="effectStackPanel" Visibility="Collapsed" HorizontalAlignment="Center" Width="100">
+                <StackPanel x:Name="effectStackPanel" Visibility="Collapsed" HorizontalAlignment="Right" Width="100">
                     <TextBlock>Effects:</TextBlock>
                     <ToggleButton x:Name="toggleEcho" Content="Echo" HorizontalAlignment="Stretch" Click="toggleEcho_Click"/>
                     <ToggleButton x:Name="toggleLimiter" Content="Limiter" HorizontalAlignment="Stretch" Margin="0,2.5,0,2.5" Click="toggleLimiter_Click" Visibility="Collapsed"/>
@@ -73,7 +73,7 @@
         <!--#endregion-->
 
         <!--#region Settings-->
-        <Grid x:Name="SettingsPage" Visibility="Visible">
+        <Grid x:Name="SettingsPage" HorizontalAlignment="Left" Visibility="Collapsed">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <!--#region Equalizer Settings-->
                 <StackPanel HorizontalAlignment="Center" Margin="0,0,0,25" BorderBrush="Gray" BorderThickness="1">

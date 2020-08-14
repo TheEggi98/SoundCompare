@@ -302,12 +302,16 @@ namespace SoundCompare
 
         private void ShowSettings_Click(object sender, RoutedEventArgs e)
         {
-            HomePage.Visibility = Visibility.Collapsed;
-            SettingsPage.Visibility = Visibility.Visible;
-            //this.audioGraph.Stop();
-            //this.dispatcherTimer.Stop();
-            //this.isPlaying = false;
-            //Playbutton.Background = this.Play;
+            if (SettingsPage.Visibility == Visibility.Collapsed)
+            {
+                HomePage.HorizontalAlignment = HorizontalAlignment.Right;
+                SettingsPage.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                HomePage.HorizontalAlignment = HorizontalAlignment.Stretch;
+                SettingsPage.Visibility = Visibility.Collapsed;
+            }
         }
         #endregion
 
@@ -642,7 +646,7 @@ namespace SoundCompare
 
         private void CloseSettings_Click(object sender, RoutedEventArgs e)
         {
-            HomePage.Visibility = Visibility.Visible;
+            HomePage.HorizontalAlignment = HorizontalAlignment.Stretch;
             SettingsPage.Visibility = Visibility.Collapsed;
         }
 

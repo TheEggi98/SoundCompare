@@ -10,8 +10,8 @@
 
     <Grid>
         <!--#region MainPage-->
-        <Grid x:ConnectionId='2' x:Name="HomePage" Visibility="Collapsed">
-            <StackPanel>
+        <Grid x:ConnectionId='2' x:Name="HomePage"  VerticalAlignment="Center">
+            <StackPanel Padding="0,120,65,118">
                 <StackPanel Orientation="Horizontal" Height="500" HorizontalAlignment="Center">
 
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2" Width="250">
@@ -58,9 +58,9 @@
                 <TextBlock x:ConnectionId='55' x:Name="Log" Height="200" Padding="5"></TextBlock>
             </StackPanel>
             <StackPanel HorizontalAlignment="Right">
-                <Button x:ConnectionId='49' x:Name="ShowSettings" Width="50" Height="50"                           >Settings</Button>
+                <Button x:ConnectionId='49' x:Name="ShowSettings" HorizontalAlignment="Right"                           >Settings</Button>
                 <Button x:ConnectionId='50' x:Name="showEffects"                           Content="&lt;&lt;" HorizontalAlignment="Right" Margin="0,150,0,0"></Button>
-                <StackPanel x:ConnectionId='51' x:Name="effectStackPanel" Visibility="Collapsed" HorizontalAlignment="Center" Width="100">
+                <StackPanel x:ConnectionId='51' x:Name="effectStackPanel" Visibility="Collapsed" HorizontalAlignment="Right" Width="100">
                     <TextBlock>Effects:</TextBlock>
                     <ToggleButton x:ConnectionId='52' x:Name="toggleEcho" Content="Echo" HorizontalAlignment="Stretch"                         />
                     <ToggleButton x:ConnectionId='53' x:Name="toggleLimiter" Content="Limiter" HorizontalAlignment="Stretch" Margin="0,2.5,0,2.5"                             Visibility="Collapsed"/>
@@ -73,7 +73,7 @@
         <!--#endregion-->
 
         <!--#region Settings-->
-        <Grid x:ConnectionId='3' x:Name="SettingsPage" Visibility="Visible">
+        <Grid x:ConnectionId='3' x:Name="SettingsPage" HorizontalAlignment="Left" Visibility="Collapsed">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <!--#region Equalizer Settings-->
                 <StackPanel HorizontalAlignment="Center" Margin="0,0,0,25" BorderBrush="Gray" BorderThickness="1">
@@ -194,7 +194,7 @@
                                     <Slider x:ConnectionId='6' x:Name="ReverbDensitySlider"                                                 Width="100" Margin="0,0,10,10"></Slider>
                                     <ToggleSwitch x:ConnectionId='7' x:Name="ReverbDisableLateFieldToggleSwitch"                                                      Width="100" Margin="0,0,10,10"></ToggleSwitch>
                                     <Slider x:ConnectionId='8' x:Name="ReverbEarlyDiffusionSlider"                                                        Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
-                                    <Slider x:ConnectionId='9' x:Name="ReverbHighEQCutOffSlider"                                                      Width="100" Margin="0,0,10,10" Minimum="1"></Slider>
+                                    <Slider x:ConnectionId='9' x:Name="ReverbHighEQCutOffSlider"                                                      Width="100" Margin="0,0,10,10"></Slider> <!--Bis hier ham die effecte die passende range-->
                                     <Slider x:ConnectionId='10' x:Name="ReverbHighEQGainSlider"                                                    Width="100" Margin="0,0,10,10"></Slider>
                                     <Slider x:ConnectionId='11' x:Name="ReverbLateDiffusionSlider"                                                       Width="100" Margin="0,0,10,10"></Slider>
                                     <Slider x:ConnectionId='12' x:Name="ReverbLowEQCutOffSlider"                                                     Width="100" Margin="0,0,10,10"></Slider>
