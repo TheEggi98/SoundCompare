@@ -58,11 +58,11 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Minimum" />
+      <RootProperty Name="Maximum" />
+      <RootProperty Name="StepFrequency" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Maximum" />
-      <RootProperty Name="Minimum" />
-      <RootProperty Name="StepFrequency" />
       <RootProperty Name="IsThumbToolTipEnabled" />
       <RootProperty Name="ManipulationMode" />
       <RootProperty Name="HorizontalAlignment" />
