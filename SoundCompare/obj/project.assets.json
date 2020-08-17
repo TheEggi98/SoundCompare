@@ -8151,18 +8151,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eggersn\\.nuget\\packages\\": {},
+    "C:\\Users\\nico-\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eggersn\\source\\repos\\SoundCompare\\SoundCompare\\SoundCompare.csproj",
+      "projectUniqueName": "C:\\Users\\nico-\\Source\\Repos\\TheEggi98\\SoundCompare\\SoundCompare\\SoundCompare.csproj",
       "projectName": "SoundCompare",
-      "projectPath": "C:\\Users\\eggersn\\source\\repos\\SoundCompare\\SoundCompare\\SoundCompare.csproj",
-      "packagesPath": "C:\\Users\\eggersn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eggersn\\source\\repos\\SoundCompare\\SoundCompare\\obj\\",
+      "projectPath": "C:\\Users\\nico-\\Source\\Repos\\TheEggi98\\SoundCompare\\SoundCompare\\SoundCompare.csproj",
+      "packagesPath": "C:\\Users\\nico-\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nico-\\Source\\Repos\\TheEggi98\\SoundCompare\\SoundCompare\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8170,7 +8170,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\eggersn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nico-\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

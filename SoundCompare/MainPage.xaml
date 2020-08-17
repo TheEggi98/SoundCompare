@@ -99,15 +99,15 @@
                                     </StackPanel>
                                     <StackPanel VerticalAlignment="Bottom">
                                         <StackPanel Orientation="Horizontal">
-                                            <Slider x:Name="EQ63HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ125HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ250HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ500HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ1kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ2kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ4kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ8kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:Name="EQ16kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ63HzSlider" ValueChanged="EQ63HzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ125HzSlider" ValueChanged="EQ125HzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ250HzSlider" ValueChanged="EQ250HzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ500HzSlider" ValueChanged="EQ500HzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ1kHzSlider" ValueChanged="EQ1kHzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ2kHzSlider" ValueChanged="EQ2kHzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ4kHzSlider" ValueChanged="EQ4kHzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ8kHzSlider" ValueChanged="EQ8kHzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:Name="EQ16kHzSlider" ValueChanged="EQ16kHzSlider_ValueChanged" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                             <TextBlock Width="30" TextAlignment="Center">63</TextBlock>
@@ -191,24 +191,24 @@
                                 </StackPanel>
                                 <StackPanel>
                                     <Slider x:Name="ReverbDecayTimeSlider" ValueChanged="ReverbDecayTimeSlider_ValueChanged" Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
-                                    <Slider x:Name="ReverbDensitySlider" ValueChanged="ReverbDensitySlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
+                                    <Slider x:Name="ReverbDensitySlider" ValueChanged="ReverbDensitySlider_ValueChanged" Width="100" Margin="0,0,10,10"  Maximum="50"></Slider>
                                     <ToggleSwitch x:Name="ReverbDisableLateFieldToggleSwitch" Toggled="ReverbDisableLateFieldToggleSwitch_Toggled" Width="100" Margin="0,0,10,10"></ToggleSwitch>
                                     <Slider x:Name="ReverbEarlyDiffusionSlider" ValueChanged="ReverbEarlyDiffusionSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
-                                    <Slider x:Name="ReverbHighEQCutOffSlider" ValueChanged="ReverbHighEQCutOffSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider> <!--Bis hier ham die effecte die passende range-->
-                                    <Slider x:Name="ReverbHighEQGainSlider" ValueChanged="ReverbHighEQGainSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbLateDiffusionSlider" ValueChanged="ReverbLateDiffusionSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbLowEQCutOffSlider" ValueChanged="ReverbLowEQCutOffSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbLowEQGainSlider" ValueChanged="ReverbLowEQGainSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbPositionLeftSlider" ValueChanged="ReverbPositionLeftSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbPositionMatrixLeftSlider" ValueChanged="ReverbPositionMatrixLeftSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbPositionMatrixRightSlider" ValueChanged="ReverbPositionMatrixRightSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbPositionRightSlider" ValueChanged="ReverbPositionRightSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbRearDelaySlider" ValueChanged="ReverbRearDelaySlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbReflectionsDelaySlider" ValueChanged="ReverbReflectionsDelaySlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbReflectionsGainSlider" ValueChanged="ReverbReflectionsGainSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbReverbDelaySlider" ValueChanged="ReverbReverbDelaySlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbReverbGainSlider" ValueChanged="ReverbReverbGainSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:Name="ReverbRoomFilterFreqSlider" ValueChanged="ReverbRoomFilterFreqSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
+                                    <Slider x:Name="ReverbHighEQCutOffSlider" ValueChanged="ReverbHighEQCutOffSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="14"></Slider> <!--Bis hier ham die effecte die passende range-->
+                                    <Slider x:Name="ReverbHighEQGainSlider" ValueChanged="ReverbHighEQGainSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
+                                    <Slider x:Name="ReverbLateDiffusionSlider" ValueChanged="ReverbLateDiffusionSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
+                                    <Slider x:Name="ReverbLowEQCutOffSlider" ValueChanged="ReverbLowEQCutOffSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
+                                    <Slider x:Name="ReverbLowEQGainSlider" ValueChanged="ReverbLowEQGainSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="12"></Slider>
+                                    <Slider x:Name="ReverbPositionLeftSlider" ValueChanged="ReverbPositionLeftSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:Name="ReverbPositionMatrixLeftSlider" ValueChanged="ReverbPositionMatrixLeftSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:Name="ReverbPositionMatrixRightSlider" ValueChanged="ReverbPositionMatrixRightSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:Name="ReverbPositionRightSlider" ValueChanged="ReverbPositionRightSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:Name="ReverbRearDelaySlider" ValueChanged="ReverbRearDelaySlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="5"></Slider>
+                                    <Slider x:Name="ReverbReflectionsDelaySlider" ValueChanged="ReverbReflectionsDelaySlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="50"></Slider>
+                                    <Slider x:Name="ReverbReflectionsGainSlider" ValueChanged="ReverbReflectionsGainSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="16"></Slider>
+                                    <Slider x:Name="ReverbReverbDelaySlider" ValueChanged="ReverbReverbDelaySlider_ValueChanged" Width="100" Margin="0,0,10,10"  Maximum="85"></Slider>
+                                    <Slider x:Name="ReverbReverbGainSlider" ValueChanged="ReverbReverbGainSlider_ValueChanged" Width="100" Margin="0,0,10,10" Maximum="20"></Slider>
+                                    <Slider x:Name="ReverbRoomFilterFreqSlider" ValueChanged="ReverbRoomFilterFreqSlider_ValueChanged" Width="100" Margin="0,0,10,10" Minimum="20"></Slider>
                                     <Slider x:Name="ReverbRoomFilterHFSlider" ValueChanged="ReverbRoomFilterHFSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
                                     <Slider x:Name="ReverbRoomFilterMainSlider" ValueChanged="ReverbRoomFilterMainSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>
                                     <Slider x:Name="ReverbRoomSizeSlider" ValueChanged="ReverbRoomSizeSlider_ValueChanged" Width="100" Margin="0,0,10,10"></Slider>

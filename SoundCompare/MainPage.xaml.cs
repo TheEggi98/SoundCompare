@@ -37,7 +37,6 @@ namespace SoundCompare
         Boolean isHearingAudio1 = true;
         Boolean manipulating = false;
 
-        TimeSpan start = new TimeSpan(0, 0, 0);
         TimeSpan end;
         TimeSpan currentTime;
 
@@ -59,6 +58,16 @@ namespace SoundCompare
         double customEQ4kHzGain;
         double customEQ8kHzGain;
         double customEQ16kHzGain;
+
+        bool isManipulatingEQ63HzSlider;
+        bool isManipulatingEQ125HzSlider;
+        bool isManipulatingEQ250HzSlider;
+        bool isManipulatingEQ500HzSlider;
+        bool isManipulatingEQ1kHzSlider;
+        bool isManipulatingEQ2kHzSlider;
+        bool isManipulatingEQ4kHzSlider;
+        bool isManipulatingEQ8kHzSlider;
+        bool isManipulatingEQ16kHzSlider;
 
 
         public MainPage()
@@ -514,88 +523,116 @@ namespace SoundCompare
         private void ReadSettings()
         {
             // Set Local Settings if not existing
-            //if (this.localSettings.Values["Settings Exists"] == null)
-            //{
-            this.localSettings.Values["Settings Exists"] = "true";
+            if (this.localSettings.Values["Settings Exists"] == null)
+            {
+                this.localSettings.Values["Settings Exists"] = "true";
 
-            this.localSettings.Values["Echo Delay"] = "5";
-            this.localSettings.Values["Echo Feedback"] = "0.2";
-            this.localSettings.Values["Echo WetDryMix"] = "0.5";
+                this.localSettings.Values["Echo Delay"] = "5";
+                this.localSettings.Values["Echo Feedback"] = "0.2";
+                this.localSettings.Values["Echo WetDryMix"] = "0.5";
 
-            this.localSettings.Values["Limiter Loudness"] = "1";
-            this.localSettings.Values["Limiter Release"] = "1";
+                this.localSettings.Values["Limiter Loudness"] = "1";
+                this.localSettings.Values["Limiter Release"] = "1";
 
-            this.localSettings.Values["Reverb DecayTime"] = "1";
-            this.localSettings.Values["Reverb Density"] = "2";
-            this.localSettings.Values["Reverb DisableLateField"] = "false";
-            this.localSettings.Values["Reverb EarlyDiffusion"] = "1";
-            this.localSettings.Values["Reverb HighEQCutoff"] = "1";
-            this.localSettings.Values["Reverb HighEQGain"] = "1";
-            this.localSettings.Values["Reverb LateDiffusion"] = "1";
-            this.localSettings.Values["Reverb LowEQCutoff"] = "1";
-            this.localSettings.Values["Reverb LowEQGain"] = "1";
-            this.localSettings.Values["Reverb PositionLeft"] = "1";
-            this.localSettings.Values["Reverb PositionMatrixLeft"] = "1";
-            this.localSettings.Values["Reverb PositionMatrixRight"] = "1";
-            this.localSettings.Values["Reverb PositionRight"] = "1";
-            this.localSettings.Values["Reverb RearDelay"] = "1";
-            this.localSettings.Values["Reverb ReflectionsDelay"] = "1";
-            this.localSettings.Values["Reverb ReflectionsGain"] = "1";
-            this.localSettings.Values["Reverb ReverbDelay"] = "1";
-            this.localSettings.Values["Reverb ReverbGain"] = "1";
-            this.localSettings.Values["Reverb RoomFilterFreq"] = "200";
-            this.localSettings.Values["Reverb RoomFilterHF"] = "0";
-            this.localSettings.Values["Reverb RoomFilterMain"] = "0";
-            this.localSettings.Values["Reverb RoomSize"] = "1";
-            this.localSettings.Values["Reverb WetDryMix"] = "0.5";
+                this.localSettings.Values["Reverb DecayTime"] = "1";
+                this.localSettings.Values["Reverb Density"] = "2";
+                this.localSettings.Values["Reverb DisableLateField"] = "false";
+                this.localSettings.Values["Reverb EarlyDiffusion"] = "1";
+                this.localSettings.Values["Reverb HighEQCutoff"] = "1";
+                this.localSettings.Values["Reverb HighEQGain"] = "1";
+                this.localSettings.Values["Reverb LateDiffusion"] = "1";
+                this.localSettings.Values["Reverb LowEQCutoff"] = "1";
+                this.localSettings.Values["Reverb LowEQGain"] = "1";
+                this.localSettings.Values["Reverb PositionLeft"] = "1";
+                this.localSettings.Values["Reverb PositionMatrixLeft"] = "1";
+                this.localSettings.Values["Reverb PositionMatrixRight"] = "1";
+                this.localSettings.Values["Reverb PositionRight"] = "1";
+                this.localSettings.Values["Reverb RearDelay"] = "1";
+                this.localSettings.Values["Reverb ReflectionsDelay"] = "1";
+                this.localSettings.Values["Reverb ReflectionsGain"] = "1";
+                this.localSettings.Values["Reverb ReverbDelay"] = "1";
+                this.localSettings.Values["Reverb ReverbGain"] = "1";
+                this.localSettings.Values["Reverb RoomFilterFreq"] = "200";
+                this.localSettings.Values["Reverb RoomFilterHF"] = "200";
+                this.localSettings.Values["Reverb RoomFilterMain"] = "200";
+                this.localSettings.Values["Reverb RoomSize"] = "1";
+                this.localSettings.Values["Reverb WetDryMix"] = "0.5";
 
-            this.localSettings.Values["EQ 63Hz"] = "0";
-            this.localSettings.Values["EQ 125Hz"] = "0";
-            this.localSettings.Values["EQ 250Hz"] = "0";
-            this.localSettings.Values["EQ 500Hz"] = "0";
-            this.localSettings.Values["EQ 1kHz"] = "0";
-            this.localSettings.Values["EQ 2kHz"] = "0";
-            this.localSettings.Values["EQ 4kHz"] = "0";
-            this.localSettings.Values["EQ 8kHz"] = "0";
-            this.localSettings.Values["EQ 16kHz"] = "0";
+                this.localSettings.Values["EQ 63Hz"] = "1";
+                this.localSettings.Values["EQ 125Hz"] = "1";
+                this.localSettings.Values["EQ 250Hz"] = "1";
+                this.localSettings.Values["EQ 500Hz"] = "1";
+                this.localSettings.Values["EQ 1kHz"] = "1";
+                this.localSettings.Values["EQ 2kHz"] = "1";
+                this.localSettings.Values["EQ 4kHz"] = "1";
+                this.localSettings.Values["EQ 8kHz"] = "1";
+                this.localSettings.Values["EQ 16kHz"] = "1";
 
-            this.localSettings.Values["selected EQ"] = "Normal";
-            //}
+                this.localSettings.Values["selected EQ"] = "Normal";
+            }
 
             // Read local Settings
             this.echo = new EchoEffectDefinition(this.audioGraph);
             this.echo.Delay = Double.Parse(this.localSettings.Values["Echo Delay"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            EchoDelaySlider.Value = this.echo.Delay;
             this.echo.Feedback = Double.Parse(this.localSettings.Values["Echo Feedback"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            EchoFeedBackSlider.Value = this.echo.Feedback;
             this.echo.WetDryMix = Double.Parse(this.localSettings.Values["Echo WetDryMix"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            EchoWetDryMixSlider.Value = this.echo.WetDryMix;
 
             this.limiter = new LimiterEffectDefinition(this.audioGraph);
             this.limiter.Loudness = UInt32.Parse(this.localSettings.Values["Limiter Loudness"].ToString());
+            LimiterLoudnessSlider.Value = this.limiter.Loudness;
             this.limiter.Release = UInt32.Parse(this.localSettings.Values["Limiter Release"].ToString());
+            LimiterReleaseSlider.Value = this.limiter.Release;
 
             this.reverb = new ReverbEffectDefinition(this.audioGraph);
             this.reverb.DecayTime = Double.Parse(this.localSettings.Values["Reverb DecayTime"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbDecayTimeSlider.Value = this.reverb.DecayTime;
             this.reverb.Density = Double.Parse(this.localSettings.Values["Reverb Density"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbDensitySlider.Value = this.reverb.Density;
             this.reverb.DisableLateField = Boolean.Parse(this.localSettings.Values["Reverb DisableLateField"].ToString());
+            ReverbDisableLateFieldToggleSwitch.IsOn = this.reverb.DisableLateField;
             this.reverb.EarlyDiffusion = Byte.Parse(this.localSettings.Values["Reverb EarlyDiffusion"].ToString());
+            ReverbEarlyDiffusionSlider.Value = this.reverb.EarlyDiffusion;
             this.reverb.HighEQCutoff = Byte.Parse(this.localSettings.Values["Reverb HighEQCutoff"].ToString());
+            ReverbHighEQCutOffSlider.Value = this.reverb.HighEQCutoff;
             this.reverb.HighEQGain = Byte.Parse(this.localSettings.Values["Reverb HighEQGain"].ToString());
+            ReverbHighEQGainSlider.Value = this.reverb.HighEQGain;
             this.reverb.LateDiffusion = Byte.Parse(this.localSettings.Values["Reverb LateDiffusion"].ToString());
+            ReverbLateDiffusionSlider.Value = this.reverb.LateDiffusion;
             this.reverb.LowEQCutoff = Byte.Parse(this.localSettings.Values["Reverb LowEQCutoff"].ToString());
+            ReverbLowEQCutOffSlider.Value = this.reverb.LowEQCutoff;
             this.reverb.LowEQGain = Byte.Parse(this.localSettings.Values["Reverb LowEQGain"].ToString());
+            ReverbLowEQGainSlider.Value = this.reverb.LowEQGain;
             this.reverb.PositionLeft = Byte.Parse(this.localSettings.Values["Reverb PositionLeft"].ToString());
+            ReverbPositionLeftSlider.Value = this.reverb.PositionLeft;
             this.reverb.PositionMatrixLeft = Byte.Parse(this.localSettings.Values["Reverb PositionMatrixLeft"].ToString());
+            ReverbPositionMatrixLeftSlider.Value = this.reverb.PositionMatrixLeft;
             this.reverb.PositionMatrixRight = Byte.Parse(this.localSettings.Values["Reverb PositionMatrixRight"].ToString());
+            ReverbPositionMatrixRightSlider.Value = this.reverb.PositionMatrixRight;
             this.reverb.PositionRight = Byte.Parse(this.localSettings.Values["Reverb PositionRight"].ToString());
+            ReverbPositionRightSlider.Value = this.reverb.PositionRight;
             this.reverb.RearDelay = Byte.Parse(this.localSettings.Values["Reverb RearDelay"].ToString());
+            ReverbRearDelaySlider.Value = this.reverb.RearDelay;
             this.reverb.ReflectionsDelay = UInt32.Parse(this.localSettings.Values["Reverb ReflectionsDelay"].ToString());
+            ReverbReflectionsDelaySlider.Value = this.reverb.ReflectionsDelay;
             this.reverb.ReflectionsGain = Double.Parse(this.localSettings.Values["Reverb ReflectionsGain"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbReflectionsGainSlider.Value = this.reverb.ReflectionsGain;
             this.reverb.ReverbDelay = Byte.Parse(this.localSettings.Values["Reverb ReverbDelay"].ToString());
+            ReverbReverbDelaySlider.Value = this.reverb.ReverbDelay;
             this.reverb.ReverbGain = Double.Parse(this.localSettings.Values["Reverb ReverbGain"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbReverbGainSlider.Value = this.reverb.ReverbGain;
             this.reverb.RoomFilterFreq = Double.Parse(this.localSettings.Values["Reverb RoomFilterFreq"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbRoomFilterFreqSlider.Value = this.reverb.RoomFilterFreq;
             this.reverb.RoomFilterHF = Double.Parse(this.localSettings.Values["Reverb RoomFilterHF"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbRoomFilterHFSlider.Value = this.reverb.RoomFilterHF;
             this.reverb.RoomFilterMain = Double.Parse(this.localSettings.Values["Reverb RoomFilterMain"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbRoomFilterMainSlider.Value = this.reverb.RoomFilterMain;
             this.reverb.RoomSize = Double.Parse(this.localSettings.Values["Reverb RoomSize"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbRoomSizeSlider.Value = this.reverb.RoomSize;
             this.reverb.WetDryMix = Double.Parse(this.localSettings.Values["Reverb WetDryMix"].ToString(), System.Globalization.CultureInfo.InvariantCulture);
+            ReverbWetDryMixSlider.Value = this.reverb.WetDryMix;
 
             this.equalizerLowFreq = new EqualizerEffectDefinition(this.audioGraph);
             this.equalizerLowFreq.Bands[0].FrequencyCenter = 63;
@@ -966,6 +1003,77 @@ namespace SoundCompare
 
         #region Equalizer Settings Sliderevents
 
+        #region ValueChanged
+
+        private void EQ63HzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ63HzGain = EQ63HzSlider.Value;
+                this.localSettings.Values["EQ 63Hz"] = EQ63HzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ125HzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ125HzGain = EQ125HzSlider.Value;
+                this.localSettings.Values["EQ 125Hz"] = EQ125HzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ250HzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ250HzGain = EQ250HzSlider.Value;
+                this.localSettings.Values["EQ 250Hz"] = EQ250HzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ500HzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ500HzGain = EQ500HzSlider.Value;
+                this.localSettings.Values["EQ 500Hz"] = EQ500HzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ1kHzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ1kHzGain = EQ1kHzSlider.Value;
+                this.localSettings.Values["EQ 1kHz"] = EQ1kHzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ2kHzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ2kHzGain = EQ2kHzSlider.Value;
+                this.localSettings.Values["EQ 2kHz"] = EQ2kHzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ4kHzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ4kHzGain = EQ4kHzSlider.Value;
+                this.localSettings.Values["EQ 4kHz"] = EQ4kHzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ8kHzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ8kHzGain = EQ8kHzSlider.Value;
+                this.localSettings.Values["EQ 8kHz"] = EQ8kHzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        private void EQ16kHzSlider_ValueChanged(object sender, Windows.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs e)
+        {
+                this.customEQ16kHzGain = EQ16kHzSlider.Value;
+                this.localSettings.Values["EQ 16kHz"] = EQ16kHzSlider.Value;
+                this.chooseEQ("Custom");
+        }
+
+        #endregion
+
+        #region ManipulationEnd
+
+        #endregion
+
         #endregion
 
         #endregion
@@ -1017,31 +1125,36 @@ namespace SoundCompare
                     break;
 
                 case "Pop":
-                    this.setEQBands(0, 0, 0, 2, 3, -2, -4, -4, -4, false);
+                    //this.setEQBands(0, 0, 0, 2, 3, -2, -4, -4, -4, false);
+                    this.setEQBands(1, 1, 1, 1, 1, 1, 1, 1, 1, false);
                     this.localSettings.Values["selected EQ"] = "Pop";
                     EQPop.IsChecked = true;
                     break;
 
                 case "Classic":
-                    this.setEQBands(0, 0, -6, 0, 1, 0, 6, 6, 6, false);
+                    //this.setEQBands(0, 0, -6, 0, 1, 0, 6, 6, 6, false);
+                    this.setEQBands(1, 1, 1, 1, 1, 1, 1, 1, 1, false);
                     this.localSettings.Values["selected EQ"] = "Classic";
                     EQClassic.IsChecked = true;
                     break;
 
                 case "Jazz":
-                    this.setEQBands(0, 0, 5, -5, -2, 2, -1, -1, -1, false);
+                    //this.setEQBands(0, 0, 5, -5, -2, 2, -1, -1, -1, false);
+                    this.setEQBands(1, 1, 1, 1, 1, 1, 1, 1, 1, false);
                     this.localSettings.Values["selected EQ"] = "Jazz";
                     EQJazz.IsChecked = true;
                     break;
 
                 case "Rock":
-                    this.setEQBands(0, 0, 3, -9, -2, 3, 3, 3, 3, false);
+                    //this.setEQBands(0, 0, 3, -9, -2, 3, 3, 3, 3, false);
+                    this.setEQBands(1, 1, 1, 1, 1, 1, 1, 1, 1, false);
                     this.localSettings.Values["selected EQ"] = "Rock";
                     EQRock.IsChecked = true;
                     break;
 
                 case "Party":
-                    this.setEQBands(8, 6, 3, 0, -3, -1, 1, 5, 9, false);
+                    //this.setEQBands(8, 6, 3, 0, -3, -1, 1, 5, 9, false);
+                    this.setEQBands(1, 1, 1, 1, 1, 1, 1, 1, 1, false);
                     this.localSettings.Values["selected EQ"] = "Party";
                     EQParty.IsChecked = true;
                     break;
@@ -1104,8 +1217,11 @@ namespace SoundCompare
             }
         }
 
+
+
         #endregion
 
         #endregion
+
     }
 }

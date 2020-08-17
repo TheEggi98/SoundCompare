@@ -99,15 +99,15 @@
                                     </StackPanel>
                                     <StackPanel VerticalAlignment="Bottom">
                                         <StackPanel Orientation="Horizontal">
-                                            <Slider x:ConnectionId='33' x:Name="EQ63HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='34' x:Name="EQ125HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='35' x:Name="EQ250HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='36' x:Name="EQ500HzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='37' x:Name="EQ1kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='38' x:Name="EQ2kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='39' x:Name="EQ4kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='40' x:Name="EQ8kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='41' x:Name="EQ16kHzSlider" Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='33' x:Name="EQ63HzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='34' x:Name="EQ125HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='35' x:Name="EQ250HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='36' x:Name="EQ500HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='37' x:Name="EQ1kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='38' x:Name="EQ2kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='39' x:Name="EQ4kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='40' x:Name="EQ8kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='41' x:Name="EQ16kHzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                             <TextBlock Width="30" TextAlignment="Center">63</TextBlock>
@@ -191,24 +191,24 @@
                                 </StackPanel>
                                 <StackPanel>
                                     <Slider x:ConnectionId='5' x:Name="ReverbDecayTimeSlider"                                                   Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
-                                    <Slider x:ConnectionId='6' x:Name="ReverbDensitySlider"                                                 Width="100" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='6' x:Name="ReverbDensitySlider"                                                 Width="100" Margin="0,0,10,10"  Maximum="50"></Slider>
                                     <ToggleSwitch x:ConnectionId='7' x:Name="ReverbDisableLateFieldToggleSwitch"                                                      Width="100" Margin="0,0,10,10"></ToggleSwitch>
                                     <Slider x:ConnectionId='8' x:Name="ReverbEarlyDiffusionSlider"                                                        Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
-                                    <Slider x:ConnectionId='9' x:Name="ReverbHighEQCutOffSlider"                                                      Width="100" Margin="0,0,10,10"></Slider> <!--Bis hier ham die effecte die passende range-->
-                                    <Slider x:ConnectionId='10' x:Name="ReverbHighEQGainSlider"                                                    Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='11' x:Name="ReverbLateDiffusionSlider"                                                       Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='12' x:Name="ReverbLowEQCutOffSlider"                                                     Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='13' x:Name="ReverbLowEQGainSlider"                                                   Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='14' x:Name="ReverbPositionLeftSlider"                                                      Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='15' x:Name="ReverbPositionMatrixLeftSlider"                                                            Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='16' x:Name="ReverbPositionMatrixRightSlider"                                                             Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='17' x:Name="ReverbPositionRightSlider"                                                       Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='18' x:Name="ReverbRearDelaySlider"                                                   Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='19' x:Name="ReverbReflectionsDelaySlider"                                                          Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='20' x:Name="ReverbReflectionsGainSlider"                                                         Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='21' x:Name="ReverbReverbDelaySlider"                                                     Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='22' x:Name="ReverbReverbGainSlider"                                                    Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='23' x:Name="ReverbRoomFilterFreqSlider"                                                        Width="100" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='9' x:Name="ReverbHighEQCutOffSlider"                                                      Width="100" Margin="0,0,10,10" Maximum="14"></Slider> <!--Bis hier ham die effecte die passende range-->
+                                    <Slider x:ConnectionId='10' x:Name="ReverbHighEQGainSlider"                                                    Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
+                                    <Slider x:ConnectionId='11' x:Name="ReverbLateDiffusionSlider"                                                       Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
+                                    <Slider x:ConnectionId='12' x:Name="ReverbLowEQCutOffSlider"                                                     Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
+                                    <Slider x:ConnectionId='13' x:Name="ReverbLowEQGainSlider"                                                   Width="100" Margin="0,0,10,10" Maximum="12"></Slider>
+                                    <Slider x:ConnectionId='14' x:Name="ReverbPositionLeftSlider"                                                      Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='15' x:Name="ReverbPositionMatrixLeftSlider"                                                            Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='16' x:Name="ReverbPositionMatrixRightSlider"                                                             Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='17' x:Name="ReverbPositionRightSlider"                                                       Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='18' x:Name="ReverbRearDelaySlider"                                                   Width="100" Margin="0,0,10,10" Maximum="5"></Slider>
+                                    <Slider x:ConnectionId='19' x:Name="ReverbReflectionsDelaySlider"                                                          Width="100" Margin="0,0,10,10" Maximum="50"></Slider>
+                                    <Slider x:ConnectionId='20' x:Name="ReverbReflectionsGainSlider"                                                         Width="100" Margin="0,0,10,10" Maximum="16"></Slider>
+                                    <Slider x:ConnectionId='21' x:Name="ReverbReverbDelaySlider"                                                     Width="100" Margin="0,0,10,10"  Maximum="85"></Slider>
+                                    <Slider x:ConnectionId='22' x:Name="ReverbReverbGainSlider"                                                    Width="100" Margin="0,0,10,10" Maximum="20"></Slider>
+                                    <Slider x:ConnectionId='23' x:Name="ReverbRoomFilterFreqSlider"                                                        Width="100" Margin="0,0,10,10" Minimum="20"></Slider>
                                     <Slider x:ConnectionId='24' x:Name="ReverbRoomFilterHFSlider"                                                      Width="100" Margin="0,0,10,10"></Slider>
                                     <Slider x:ConnectionId='25' x:Name="ReverbRoomFilterMainSlider"                                                        Width="100" Margin="0,0,10,10"></Slider>
                                     <Slider x:ConnectionId='26' x:Name="ReverbRoomSizeSlider"                                                  Width="100" Margin="0,0,10,10"></Slider>
