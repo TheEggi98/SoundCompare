@@ -2,6 +2,7 @@
 Acustical Sound comparison made easy
 
 ########### IN DEV #########
+
 Minimal supported Display measurements: Width=800, Height=550 (but that looks ugly)
 
 Features:
