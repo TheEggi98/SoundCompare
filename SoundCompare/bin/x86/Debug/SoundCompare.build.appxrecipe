@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>PC-NICO</Machine>
-    <WindowsUser>nico-</WindowsUser>
+    <Machine>NB-FIELD-50</Machine>
+    <WindowsUser>EggersN</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>6a796d45-da58-423f-8b2e-82811f58684a</PackageIdentityName>
     <PackageIdentityPublisher>CN=EggersN</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\SoundCompare.exe">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\SoundCompare.exe">
       <PackagePath>entrypoint\SoundCompare.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
@@ -34,67 +34,67 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\noSound.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\noSound.png">
       <PackagePath>Assets\noSound.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Pause.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Pause.png">
       <PackagePath>Assets\Pause.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Play.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Play.png">
       <PackagePath>Assets\Play.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Sound.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Sound.png">
       <PackagePath>Assets\Sound.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Stop.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Stop.png">
       <PackagePath>Assets\Stop.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\SoundCompare.xr.xml">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\SoundCompare.xr.xml">
       <PackagePath>SoundCompare.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nico-\Source\Repos\TheEggi98\SoundCompare\SoundCompare\bin\x86\Debug\Core\SoundCompare.exe">
+    <AppxPackagedFile Include="C:\Users\eggersn\source\repos\SoundCompare\SoundCompare\bin\x86\Debug\Core\SoundCompare.exe">
       <PackagePath>SoundCompare.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
@@ -149,33 +149,33 @@
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.27810.0</Version>
+      <Version>14.0.27323.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27810.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27323.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.27810.0</Version>
+      <Version>14.0.27323.0</Version>
       <Architecture>ARM64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27810.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27323.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM64\Microsoft.VCLibs.ARM64.Debug.14.00.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.27810.0</Version>
+      <Version>14.0.27323.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27810.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27323.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.27810.0</Version>
+      <Version>14.0.27323.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27810.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.27323.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo></MoreInfo>
     </ResolvedSDKReference>

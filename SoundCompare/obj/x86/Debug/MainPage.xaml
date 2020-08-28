@@ -1,4 +1,5 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
+    x:Name="Page"
     x:Class="SoundCompare.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,12 +7,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" 
+    >
 
     <Grid>
         <!--#region MainPage-->
-        <Grid x:ConnectionId='2' x:Name="HomePage"  VerticalAlignment="Center">
-            <StackPanel Padding="0,120,65,118">
+        <Grid VerticalAlignment="Center">
+          <StackPanel x:ConnectionId='48' x:Name="HomePage" >
                 <StackPanel Orientation="Horizontal" Height="500" HorizontalAlignment="Center">
 
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Black" BorderThickness="2" Width="250">
@@ -57,7 +59,7 @@
                 </StackPanel>
                 <TextBlock x:ConnectionId='55' x:Name="Log" Height="200" Padding="5"></TextBlock>
             </StackPanel>
-            <StackPanel HorizontalAlignment="Right">
+            <StackPanel HorizontalAlignment="Right" Height="500">
                 <Button x:ConnectionId='49' x:Name="ShowSettings" HorizontalAlignment="Right"                           >Settings</Button>
                 <Button x:ConnectionId='50' x:Name="showEffects"                           Content="&lt;&lt;" HorizontalAlignment="Right" Margin="0,150,0,0"></Button>
                 <StackPanel x:ConnectionId='51' x:Name="effectStackPanel" Visibility="Collapsed" HorizontalAlignment="Right" Width="100">
@@ -73,7 +75,7 @@
         <!--#endregion-->
 
         <!--#region Settings-->
-        <Grid x:ConnectionId='3' x:Name="SettingsPage" HorizontalAlignment="Left" Visibility="Collapsed">
+        <Grid x:ConnectionId='2' x:Name="SettingsPage" HorizontalAlignment="Center" Visibility="Collapsed">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <!--#region Equalizer Settings-->
                 <StackPanel HorizontalAlignment="Center" Margin="0,0,0,25" BorderBrush="Gray" BorderThickness="1">
@@ -81,13 +83,13 @@
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
                         <StackPanel HorizontalAlignment="Stretch"  BorderBrush="Gray" BorderThickness="1">
                             <TextBlock HorizontalAlignment="Center">Equalizer</TextBlock>
-                            <ToggleButton x:ConnectionId='42' x:Name="EQNormal"                        HorizontalAlignment="Stretch">Normal</ToggleButton>
-                            <ToggleButton x:ConnectionId='43' x:Name="EQPop"                     HorizontalAlignment="Stretch">Pop</ToggleButton>
-                            <ToggleButton x:ConnectionId='44' x:Name="EQClassic"                          HorizontalAlignment="Stretch">Classic</ToggleButton>
-                            <ToggleButton x:ConnectionId='45' x:Name="EQJazz"                      HorizontalAlignment="Stretch">Jazz</ToggleButton>
-                            <ToggleButton x:ConnectionId='46' x:Name="EQRock"                      HorizontalAlignment="Stretch">Rock</ToggleButton>
-                            <ToggleButton x:ConnectionId='47' x:Name="EQParty"                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Party</ToggleButton>
-                            <ToggleButton x:ConnectionId='48' x:Name="EQCustom"                        HorizontalAlignment="Left">Benutzerdefiniert</ToggleButton>
+                            <ToggleButton x:ConnectionId='41' x:Name="EQNormal"                        HorizontalAlignment="Stretch">Normal</ToggleButton>
+                            <ToggleButton x:ConnectionId='42' x:Name="EQPop"                     HorizontalAlignment="Stretch">Pop</ToggleButton>
+                            <ToggleButton x:ConnectionId='43' x:Name="EQClassic"                          HorizontalAlignment="Stretch">Classic</ToggleButton>
+                            <ToggleButton x:ConnectionId='44' x:Name="EQJazz"                      HorizontalAlignment="Stretch">Jazz</ToggleButton>
+                            <ToggleButton x:ConnectionId='45' x:Name="EQRock"                      HorizontalAlignment="Stretch">Rock</ToggleButton>
+                            <ToggleButton x:ConnectionId='46' x:Name="EQParty"                       HorizontalAlignment="Stretch" VerticalAlignment="Stretch">Party</ToggleButton>
+                            <ToggleButton x:ConnectionId='47' x:Name="EQCustom"                        HorizontalAlignment="Left">Benutzerdefiniert</ToggleButton>
                         </StackPanel>
                         <StackPanel  BorderBrush="Gray" BorderThickness="1">
                             <Grid Height="243" Width="310">
@@ -99,15 +101,15 @@
                                     </StackPanel>
                                     <StackPanel VerticalAlignment="Bottom">
                                         <StackPanel Orientation="Horizontal">
-                                            <Slider x:ConnectionId='33' x:Name="EQ63HzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='34' x:Name="EQ125HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='35' x:Name="EQ250HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='36' x:Name="EQ500HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='37' x:Name="EQ1kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='38' x:Name="EQ2kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='39' x:Name="EQ4kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='40' x:Name="EQ8kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
-                                            <Slider x:ConnectionId='41' x:Name="EQ16kHzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="10" Minimum="-10"></Slider>
+                                            <Slider x:ConnectionId='32' x:Name="EQ63HzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='33' x:Name="EQ125HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='34' x:Name="EQ250HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='35' x:Name="EQ500HzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='36' x:Name="EQ1kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='37' x:Name="EQ2kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='38' x:Name="EQ4kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='39' x:Name="EQ8kHzSlider"                                          Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
+                                            <Slider x:ConnectionId='40' x:Name="EQ16kHzSlider"                                           Orientation="Vertical" Width="30" Height="220" Maximum="7.94" Minimum="0.126" StepFrequency="0.001"></Slider>
                                         </StackPanel>
                                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                             <TextBlock Width="30" TextAlignment="Center">63</TextBlock>
@@ -139,9 +141,9 @@
                                 <TextBlock Height="32" Padding="0,4,0,0" Margin="0,0,0,10">Wet Dry Mix:</TextBlock>
                             </StackPanel>
                             <StackPanel>
-                                <Slider x:ConnectionId='30' x:Name="EchoDelaySlider"                                             Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
-                                <Slider x:ConnectionId='31' x:Name="EchoFeedBackSlider"                                                Width="100" Margin="0,0,10,10" Maximum="1" StepFrequency="0.1"></Slider>
-                                <Slider x:ConnectionId='32' x:Name="EchoWetDryMixSlider"                                                 Width="100" Margin="0,0,10,10" Maximum="1" StepFrequency="0.1"></Slider>
+                                <Slider x:ConnectionId='29' x:Name="EchoDelaySlider"                                             Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
+                                <Slider x:ConnectionId='30' x:Name="EchoFeedBackSlider"                                                Width="100" Margin="0,0,10,10" Maximum="1" StepFrequency="0.1"></Slider>
+                                <Slider x:ConnectionId='31' x:Name="EchoWetDryMixSlider"                                                 Width="100" Margin="0,0,10,10" Maximum="1" StepFrequency="0.1"></Slider>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -154,8 +156,8 @@
                                 <TextBlock Height="32" Padding="0,4,0,0" Margin="0,0,0,10">Release:</TextBlock>
                             </StackPanel>
                             <StackPanel>
-                                <Slider x:ConnectionId='28' x:Name="LimiterLoudnessSlider"                                                   Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
-                                <Slider x:ConnectionId='29' x:Name="LimiterReleaseSlider"                                                  Width="100" Margin="0,0,10,10" Minimum="1" Maximum="20"></Slider>
+                                <Slider x:ConnectionId='27' x:Name="LimiterLoudnessSlider"                                                   Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
+                                <Slider x:ConnectionId='28' x:Name="LimiterReleaseSlider"                                                  Width="100" Margin="0,0,10,10" Minimum="1" Maximum="20"></Slider>
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
@@ -190,29 +192,29 @@
                                     <TextBlock Height="32" Padding="0,4,0,0" Margin="0,0,0,10">Wet Dry Mix:</TextBlock>
                                 </StackPanel>
                                 <StackPanel>
-                                    <Slider x:ConnectionId='5' x:Name="ReverbDecayTimeSlider"                                                   Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
-                                    <Slider x:ConnectionId='6' x:Name="ReverbDensitySlider"                                                 Width="100" Margin="0,0,10,10"  Maximum="50"></Slider>
-                                    <ToggleSwitch x:ConnectionId='7' x:Name="ReverbDisableLateFieldToggleSwitch"                                                      Width="100" Margin="0,0,10,10"></ToggleSwitch>
-                                    <Slider x:ConnectionId='8' x:Name="ReverbEarlyDiffusionSlider"                                                        Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
-                                    <Slider x:ConnectionId='9' x:Name="ReverbHighEQCutOffSlider"                                                      Width="100" Margin="0,0,10,10" Maximum="14"></Slider> <!--Bis hier ham die effecte die passende range-->
-                                    <Slider x:ConnectionId='10' x:Name="ReverbHighEQGainSlider"                                                    Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
-                                    <Slider x:ConnectionId='11' x:Name="ReverbLateDiffusionSlider"                                                       Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
-                                    <Slider x:ConnectionId='12' x:Name="ReverbLowEQCutOffSlider"                                                     Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
-                                    <Slider x:ConnectionId='13' x:Name="ReverbLowEQGainSlider"                                                   Width="100" Margin="0,0,10,10" Maximum="12"></Slider>
-                                    <Slider x:ConnectionId='14' x:Name="ReverbPositionLeftSlider"                                                      Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
-                                    <Slider x:ConnectionId='15' x:Name="ReverbPositionMatrixLeftSlider"                                                            Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
-                                    <Slider x:ConnectionId='16' x:Name="ReverbPositionMatrixRightSlider"                                                             Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
-                                    <Slider x:ConnectionId='17' x:Name="ReverbPositionRightSlider"                                                       Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
-                                    <Slider x:ConnectionId='18' x:Name="ReverbRearDelaySlider"                                                   Width="100" Margin="0,0,10,10" Maximum="5"></Slider>
-                                    <Slider x:ConnectionId='19' x:Name="ReverbReflectionsDelaySlider"                                                          Width="100" Margin="0,0,10,10" Maximum="50"></Slider>
-                                    <Slider x:ConnectionId='20' x:Name="ReverbReflectionsGainSlider"                                                         Width="100" Margin="0,0,10,10" Maximum="16"></Slider>
-                                    <Slider x:ConnectionId='21' x:Name="ReverbReverbDelaySlider"                                                     Width="100" Margin="0,0,10,10"  Maximum="85"></Slider>
-                                    <Slider x:ConnectionId='22' x:Name="ReverbReverbGainSlider"                                                    Width="100" Margin="0,0,10,10" Maximum="20"></Slider>
-                                    <Slider x:ConnectionId='23' x:Name="ReverbRoomFilterFreqSlider"                                                        Width="100" Margin="0,0,10,10" Minimum="20"></Slider>
-                                    <Slider x:ConnectionId='24' x:Name="ReverbRoomFilterHFSlider"                                                      Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='25' x:Name="ReverbRoomFilterMainSlider"                                                        Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='26' x:Name="ReverbRoomSizeSlider"                                                  Width="100" Margin="0,0,10,10"></Slider>
-                                    <Slider x:ConnectionId='27' x:Name="ReverbWetDryMixSlider"                                                   Width="100" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='4' x:Name="ReverbDecayTimeSlider"                                                   Width="100" Margin="0,0,10,10" Minimum="1" Maximum="50"></Slider>
+                                    <Slider x:ConnectionId='5' x:Name="ReverbDensitySlider"                                                 Width="100" Margin="0,0,10,10"  Maximum="50"></Slider>
+                                    <ToggleSwitch x:ConnectionId='6' x:Name="ReverbDisableLateFieldToggleSwitch"                                                      Width="100" Margin="0,0,10,10"></ToggleSwitch>
+                                    <Slider x:ConnectionId='7' x:Name="ReverbEarlyDiffusionSlider"                                                        Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
+                                    <Slider x:ConnectionId='8' x:Name="ReverbHighEQCutOffSlider"                                                      Width="100" Margin="0,0,10,10" Maximum="14"></Slider> <!--Bis hier ham die effecte die passende range-->
+                                    <Slider x:ConnectionId='9' x:Name="ReverbHighEQGainSlider"                                                    Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
+                                    <Slider x:ConnectionId='10' x:Name="ReverbLateDiffusionSlider"                                                       Width="100" Margin="0,0,10,10" Maximum="15"></Slider>
+                                    <Slider x:ConnectionId='11' x:Name="ReverbLowEQCutOffSlider"                                                     Width="100" Margin="0,0,10,10" Maximum="8"></Slider>
+                                    <Slider x:ConnectionId='12' x:Name="ReverbLowEQGainSlider"                                                   Width="100" Margin="0,0,10,10" Maximum="12"></Slider>
+                                    <Slider x:ConnectionId='13' x:Name="ReverbPositionLeftSlider"                                                      Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='14' x:Name="ReverbPositionMatrixLeftSlider"                                                            Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='15' x:Name="ReverbPositionMatrixRightSlider"                                                             Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='16' x:Name="ReverbPositionRightSlider"                                                       Width="100" Margin="0,0,10,10" Maximum="30"></Slider>
+                                    <Slider x:ConnectionId='17' x:Name="ReverbRearDelaySlider"                                                   Width="100" Margin="0,0,10,10" Maximum="5"></Slider>
+                                    <Slider x:ConnectionId='18' x:Name="ReverbReflectionsDelaySlider"                                                          Width="100" Margin="0,0,10,10" Maximum="50"></Slider>
+                                    <Slider x:ConnectionId='19' x:Name="ReverbReflectionsGainSlider"                                                         Width="100" Margin="0,0,10,10" Maximum="16"></Slider>
+                                    <Slider x:ConnectionId='20' x:Name="ReverbReverbDelaySlider"                                                     Width="100" Margin="0,0,10,10"  Maximum="85"></Slider>
+                                    <Slider x:ConnectionId='21' x:Name="ReverbReverbGainSlider"                                                    Width="100" Margin="0,0,10,10" Maximum="20"></Slider>
+                                    <Slider x:ConnectionId='22' x:Name="ReverbRoomFilterFreqSlider"                                                        Width="100" Minimum="20" Maximum="20000" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='23' x:Name="ReverbRoomFilterHFSlider"                                                      Width="100" Minimum="-100" Maximum="0" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='24' x:Name="ReverbRoomFilterMainSlider"                                                        Width="100" Minimum="-100" Maximum="0" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='25' x:Name="ReverbRoomSizeSlider"                                                  Width="100" Margin="0,0,10,10"></Slider>
+                                    <Slider x:ConnectionId='26' x:Name="ReverbWetDryMixSlider"                                                   Width="100" Margin="0,0,10,10"></Slider>
                                 </StackPanel>
                             </StackPanel>
                         </ScrollViewer>
@@ -221,7 +223,7 @@
                 <!--#endregion-->
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button x:ConnectionId='4' x:Name="CloseSettings"                            >Close Settings</Button>
+                    <Button x:ConnectionId='3' x:Name="CloseSettings"                            >Close Settings</Button>
                 </StackPanel>
 
             </StackPanel>

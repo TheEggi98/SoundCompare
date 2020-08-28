@@ -28,8 +28,8 @@
       <RootProperty Name="Orientation" />
       <RootProperty Name="Width" />
       <RootProperty Name="Padding" />
-      <RootProperty Name="Visibility" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
