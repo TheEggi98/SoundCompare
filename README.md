@@ -1,17 +1,18 @@
 # SoundCompare
 Acustical Sound comparison made easy
 
-########### IN DEV #########
+########### IN DEV #########  
+More or less abandoned
 
 Minimal supported Display measurements: Width=800, Height=550 (but that looks ugly)
 
 Features:
 - Play 2 Audiofiles parallel
-- Audio Effects (customizable)
+- Audio Effects (customizable) <--- Dont work properly
     - Echo
     - Limiter
     - Reverb
-- Equalizer
+- Equalizer <--- Dont work properly
     - Normal
     - Pop
     - Classic
